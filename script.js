@@ -39,11 +39,11 @@ function GenerateRandomNumber() {
 }
 
 // prompts
-var lower1 = confirm("do you want to use lower case letters?");
-var upper1 = confirm("do you want to use uppper case letters?");
-var special1 = confirm("do you want to use special characters?");
-var number1 = confirm("do you want to use numbers?");
-var length1 = prompt("how long would you like this password to be? must be between 8 and 128 characters.");
+var lower1 = confirm("Do you want to use lowercase letters?");
+var upper1 = confirm("Do you want to use upppercase letters?");
+var special1 = confirm("Do you want to use special characters?");
+var number1 = confirm("Do you want to use numbers?");
+var length1 = prompt("How long would you like this password to be? must be between 8 and 128 characters.");
 
 
 // array 
@@ -61,26 +61,35 @@ alert(length1);
 // if conditions 
 
 if (lower1 === true) {
-  conarr.push(generateRandomLower());
+  conarr.push(generateRandomLower);
 }
 if (upper1 === true) {
-  conarr.push(generateRandomUpper());
+  conarr.push(generateRandomUpper);
 }
 if (special1 === true) {
-  conarr.push(generateRandomSpecial());
+  conarr.push(generateRandomSpecial);
 }
 if (number1 === true) {
-  conarr.push(GenerateRandomNumber());
+  conarr.push(GenerateRandomNumber);
 }
 if (length1 < 8 || length > 128) {
   alert("length not between 8 and 128 characters")
 }
-// else (lower1 === false && upper1 === false && special1 === false && number1 === false) {
-//   alert("password must conatain atleast one option");
-// }
+if (lower1 === false && upper1 === false && special1 === false && number1 === false) { 
+  alert("password must conatain atleast one option");
+}
+
 
 // for loop 
-
+var randpass = [];
 for (var i = 0; i < length1; i++ ){
-  console.log(Math.floor(Math.random().toString * conarr[i]));
+  var func = conarr[Math.floor(Math.random() * conarr.length)]
+  randpass.push(func())
+
+    var Final = randpass.join('');
+    console.log(Final)
+
+    document.getElementById("password").textContent = Final;
+
 }
+
