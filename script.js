@@ -13,6 +13,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+
 // function list 
 function generateRandomLower() {
   var lower = "abcdefghijklmnopqrstuvwxyz"
@@ -50,14 +51,6 @@ var length1 = prompt("How long would you like this password to be? must be betwe
 
 var conarr = [];
 
-// alerts
-alert(lower1);
-alert(upper1);
-alert(special1);
-alert(number1);
-alert(length1);
-
-
 // if conditions 
 
 if (lower1 === true) {
@@ -72,11 +65,13 @@ if (special1 === true) {
 if (number1 === true) {
   conarr.push(GenerateRandomNumber);
 }
-if (length1 < 8 || length > 128) {
-  alert("length not between 8 and 128 characters")
-}
+
 if (lower1 === false && upper1 === false && special1 === false && number1 === false) { 
   alert("password must conatain atleast one option");
+}
+if (length1 < 8 || length > 128) {
+  alert("length not between 8 and 128 characters");
+
 }
 
 
