@@ -13,6 +13,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+function generatePassword() {
 // function list 
 function generateRandomLower() {
   var lower = "abcdefghijklmnopqrstuvwxyz"
@@ -86,4 +87,4 @@ for (var i = 0; i < length1; i++ ){
     document.getElementById("password").textContent = Final;
 
 }
-
+}
