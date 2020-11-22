@@ -85,6 +85,6 @@ for (var i = 0; i < length1; i++ ){
     console.log(Final)
 
     document.getElementById("password").textContent = Final;
-
+    return(password);
 }
 }
